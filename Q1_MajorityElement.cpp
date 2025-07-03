@@ -63,9 +63,22 @@ int majorityElement(vector<int>& nums) {
     return 0;
 */
  
+/*
     //-->>1 Bruth force approch T.C-O(N^2) , S.C-O(1)
    // 2-loop chla do and count find krke nums.size()/2 se compaire krvado
-
+   for(int i = 0; i < nums.size(); i++) {
+        int count = 0;
+        for(int j = 0; j < nums.size(); j++) {
+            if(nums[i] == nums[j]) {
+                count++;
+            }
+        }
+        if(count > nums.size() / 2) {
+            return nums[i];
+        }
+    }
+    return -1; // Return -1 if no majority element found
+*/
 }
 
 int main() {
